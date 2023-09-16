@@ -1,0 +1,4 @@
+rewriteengine on
+rewritecond %{request_filename} !-f
+rewritecond %{request_filename} !-d
+rewriterule ^(.*)$ /index.html?path=$1 [nc,l,qsa]
